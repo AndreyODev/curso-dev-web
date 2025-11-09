@@ -1,0 +1,717 @@
+/* --------------------------
+Barra de navegação vertical
+-----------------------------
+*/
+
+/* ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+
+}
+
+a {
+    text-decoration: none;
+    text-indent: 40px;
+    line-height: 40px;
+    width: 200px;
+    display: block;
+    background: url(../img/menu.png) no-repeat left bottom;
+
+}
+
+a:hover {
+    background-position: right;
+}
+
+#home .home a,
+#sobre .sobre a {
+    background-position: right;
+} */
+
+/* --------------------------
+Barra de navegação horizontal 
+-----------------------------
+*/
+/* ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 720px;
+    background: #159cb0 url(../img/fundo-horizontal.png) repeat-x;
+    float: left;
+
+}
+
+ul a {
+    text-decoration: none;
+    font-size: 1.2em;
+    float: left;
+    padding: 0 2em;
+    line-height: 2em;
+    color: #fff;
+    background: url(../img/divisor.png) repeat-y;
+}
+
+ul .primeiro a {
+    background: none;
+}
+
+ul a:hover {
+    color: #085662;
+    background: #44cade;
+}
+
+#home .home a,
+#sobre .sobre a {
+    background-position: right;
+    color: #085662;
+    background: #44cade;
+} */
+
+/* --------------------------
+Barra de navegação com abas
+-----------------------------
+*/
+
+/* body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 720px;
+}
+
+ul li {
+    float: left;
+    background: url(../img/aba-direita.png) no-repeat top right;
+}
+
+li a {
+    display: block;
+    padding: 0 2em;
+    line-height: 3em;
+    text-decoration: none;
+    background: url(../img/aba-esquerda.png) no-repeat top left;
+    color: #fff;
+
+}
+
+ul a:hover {
+    color: #894a1f;
+}
+
+ul #atual {
+    background: url(../img/aba-direita-atual.png) no-repeat top right;
+}
+
+ul #atual a {
+    background: url(../img/aba-esquerda-atual.png) no-repeat top left;
+} */
+
+/* Layout fixo */
+
+/* body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #f2f2f2;
+
+
+}
+
+#container {
+    width: 720px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+#marca {
+    height: 100px;
+    background: #9E9E9E;
+    text-align: center;
+    line-height: 100px;
+}
+
+#conteudo {
+    width: 520px;
+    float: right;
+
+}
+
+#conteudo-principal {
+    width: 320px;
+    float: left;
+}
+
+#conteudo-secundario {
+    width: 180px;
+    float: right;
+    background: #d1d1d1;
+}
+
+#conteudo-secundario h1,
+#conteudo-secundario h2,
+#conteudo-secundario h3,
+#conteudo-secundario p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#navegacao {
+    width: 180px;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+}
+
+#navegacao ul {
+    list-style-type: none;
+}
+
+#navegacao ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#rodape {
+    clear: both;
+    background: #c4c4c4;
+    padding: 5px;
+} */
+
+/* Recriando o layout fixo sozinho, utilizando o conhecimento que tenho */
+/* body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#container {
+    width: 720px;
+    margin: 0 auto;
+}
+
+#marca {
+    width: 720px;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    background: rgb(138, 135, 135);
+}
+
+#conteudo {
+    float: right;
+    width: 520px;
+}
+
+#conteudo-principal {
+    float: left;
+    width: 320px;
+}
+
+#conteudo-secundario {
+    float: right;
+    width: 180px;
+    background: rgb(214, 205, 205);
+}
+
+#conteudo-secundario h2,
+#conteudo-secundario p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+#navegacao {
+    width: 180px;
+    float: left;
+    background: rgb(214, 205, 205);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+#navegacao ul {
+    list-style-type: none;
+}
+
+#navegacao ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#rodape {
+    clear: both;
+    background: rgb(160, 153, 153);
+    padding: 5px;
+} */
+
+/* Layout líquido */
+
+/* body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #f2f2f2;
+
+
+}
+
+#container {
+    width: 85%;
+    margin: 0 auto;
+    background: #fff;
+    border: 1px solid red;
+    min-width: 720px;
+    max-width: 1280px;
+}
+
+#marca {
+    width: 100%;
+    height: 100px;
+    background: #9E9E9E;
+    text-align: center;
+    line-height: 100px;
+}
+
+#conteudo {
+    width: 74%;
+    float: right;
+    border: 1px solid red;
+
+}
+
+#conteudo-principal {
+    width: 63%;
+    float: left;
+    border: 1px solid red;
+}
+
+#conteudo-secundario {
+    width: 34%;
+    float: right;
+    background: #d1d1d1;
+    border: 1px solid red;
+}
+
+#conteudo-secundario h1,
+#conteudo-secundario h2,
+#conteudo-secundario h3,
+#conteudo-secundario p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#navegacao {
+    width: 24%;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+    border: 1px solid red;
+}
+
+#navegacao ul {
+    list-style-type: none;
+}
+
+#navegacao ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#rodape {
+    clear: both;
+    background: #c4c4c4;
+    padding: 5px;
+} */
+
+/* Imagens líquidas */
+
+/* body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #f2f2f2;
+
+
+}
+
+#container {
+    width: 85%;
+    margin: 0 auto;
+    background: #fff;
+    min-width: 720px;
+    max-width: 1280px;
+}
+
+#marca {
+    width: 100%;
+    height: 200px;
+    background: #225992 url(../img/cabecalho2.jpg) no-repeat center;
+    text-align: center;
+    line-height: 200px;
+}
+
+#conteudo {
+    width: 74%;
+    float: right;
+
+}
+
+#conteudo-principal {
+    width: 63%;
+    float: left;
+}
+
+img.img-conteudo {
+    width: 93%;
+    padding: 3%;
+    max-width: 600px;
+}
+
+#conteudo-secundario {
+    width: 34%;
+    float: right;
+    background: #d1d1d1;
+}
+
+#conteudo-secundario h1,
+#conteudo-secundario h2,
+#conteudo-secundario h3,
+#conteudo-secundario p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#navegacao {
+    width: 24%;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+}
+
+#navegacao ul {
+    list-style-type: none;
+}
+
+#navegacao ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#rodape {
+    clear: both;
+    background: #c4c4c4;
+    padding: 5px;
+} */
+
+/* Coluna Falsa */
+
+/* body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: #f2f2f2;
+
+
+}
+
+#container {
+    width: 960px;
+    margin: 0 auto;
+    background: #fff url(../img/coluna.png) repeat-y left top;
+    min-width: 720px;
+    max-width: 1280px;
+}
+
+#marca {
+    width: 100%;
+    height: 200px;
+    background: #225992 url(../img/cabecalho2.jpg) no-repeat center;
+    text-align: center;
+    line-height: 200px;
+}
+
+#conteudo {
+    width: 74%;
+    float: right;
+
+}
+
+#conteudo-principal {
+    width: 63%;
+    float: left;
+}
+
+img.img-conteudo {
+    width: 93%;
+    padding: 3%;
+    max-width: 600px;
+}
+
+#conteudo-secundario {
+    width: 34%;
+    float: right;
+    background: #d1d1d1;
+}
+
+#conteudo-secundario h1,
+#conteudo-secundario h2,
+#conteudo-secundario h3,
+#conteudo-secundario p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#navegacao {
+    width: 24%;
+    float: left;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    background: #d1d1d1;
+}
+
+#navegacao ul {
+    list-style-type: none;
+}
+
+#navegacao ul a {
+    text-decoration: none;
+    color: black;
+}
+
+#rodape {
+    clear: both;
+    background: #c4c4c4;
+    padding: 5px;
+} */
+
+/* Estilizando tabela */
+
+/* body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1em;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 600px;
+    line-height: 40px;
+}
+
+th {
+    border-top: 1px solid rgb(128, 123, 123);
+    border-bottom: 1px solid rgb(128, 123, 123);
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: left;
+
+}
+
+tr:hover {
+    background: rgb(175, 224, 142);
+}
+
+.direita {
+    text-align: right;
+} */
+
+/* Tela de login */
+
+/* body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: purple url(../img/fundo.jpg) no-repeat top center;
+}
+
+#centro {
+    background: #cccccc80;
+    margin: 0 auto;
+    margin-top: 150px;
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#centro img {
+    width: 120px;
+    height: 120px;
+    margin-top: -60px;
+    margin-bottom: 20px;
+
+} */
+
+/* primeira forma de realizar */
+/* input {
+    border: none;
+    font-size: 18px;
+    margin: 5px;
+    height: 40px;
+    width: 80%;
+    text-align: left;
+    padding-left: 40px;
+}
+
+input.email {
+    background: #fff url(../img/icone-usuario.png) no-repeat left;
+    margin-bottom: 5px;
+    background-position: 7px;
+}
+
+
+input.senha {
+    background: #fff url(../img/icone-cadeado.png) no-repeat left;
+    margin-bottom: 5px;
+    background-position: 7px;
+} */
+
+/* Segunda forma de realizar */
+
+/* #centro .email {
+    border: none;
+    font-size: 18px;
+    height: 40px;
+    width: 80%;
+    text-align: left;
+    text-indent: 30px;
+    background: #fff url(../img/icone-usuario.png) no-repeat left;
+    margin-bottom: 5px;
+    background-position: 5px;
+
+}
+
+#centro .senha {
+    border: none;
+    font-size: 18px;
+    height: 40px;
+    width: 80%;
+    text-align: left;
+    text-indent: 30px;
+    background: #fff url(../img/icone-cadeado.png) no-repeat left;
+    margin-bottom: 5px;
+    background-position: 5px;
+
+} */
+
+/* input.submit {
+    text-align: center;
+    color: #fff;
+    height: 40px;
+    font-size: 18px;
+    width: 90%;
+    padding: 5px 20px;
+    text-align: center;
+    background: linear-gradient(to bottom, #faa600, #f68a00);
+    border: 1px solid #db7d00;
+} */
+
+/* Fim da tela de login */
+
+/* Arredondamento com imagens*/
+
+/* .caixa {
+    width: 400px;
+    background: #dedede url(../img/fundo-arredondamento.png) repeat-y;
+}
+
+.caixa h2 {
+    padding: 10px 20px 0 20px;
+    background: url(../img/topo2.png) no-repeat left top;
+}
+
+.caixa p {
+    padding: 0 20px;
+    border: 1px solid red;
+    margin-bottom: 0;
+}
+
+.caixa .ultimo {
+    background: url(../img/baixo2.png) no-repeat left bottom;
+    width: 400px;
+    height: 24px;
+    border: 1px solid red;
+} */
+
+/* .caixa {
+    width: 400px;
+    background: #dedede url(../img/topo2.png) no-repeat left top;
+}
+
+.caixa h2 {
+    padding: 10px 20px 0 20px;
+}
+
+.caixa p {
+    background: url(../img/baixo2.png) no-repeat left bottom;
+    padding: 0 20px 20px 20px;
+} */
+
+/* Posicionamento (Prática)*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: lightskyblue;
+}
+
+#conteiner-principal {
+  width: 700px;
+  background: #fff;
+  margin: 1em auto;
+  padding: 0.8em;
+  position: relative;
+}
+
+#topo {
+  height: 60px;
+  background: rgb(38, 138, 219);
+}
+
+#conteiner-principal #topo img {
+  width: 100px;
+  padding: 20px;
+}
+
+#conteiner-principal #novo-site {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+#navegacao ul {
+  list-style-type: none;
+  position: absolute;
+  left: 130px;
+  top: 35px;
+}
+
+#navegacao li {
+  display: inline;
+  margin: 10px;
+}
+
+#navegacao a {
+  color: #fff;
+  text-decoration: none;
+  padding: 5px;
+}
+
+#navegacao a:hover {
+  color: rgb(38, 138, 219);
+  background: #fff;
+}
+
+#conteudo h1 {
+  margin: 20px 0;
+}
+
+#chat {
+  width: 150px;
+  height: 200px;
+  background: rgb(38, 138, 219);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
