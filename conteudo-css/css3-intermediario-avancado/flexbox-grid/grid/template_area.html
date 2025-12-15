@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Grid</title>
+		<style>
+			body {
+				font-size: 1.2rem;
+				background-color: black;
+				color: #fff;
+				margin: 0;
+				padding: 20px;
+			}
+
+			.grid {
+				display: grid;
+				row-gap: 10px;
+				column-gap: 10px;
+				grid-template-columns: 1fr;
+				grid-template-areas:
+					"cabecalho"
+					"navegacao"
+					"principal"
+					"rodape";
+			}
+
+			@media (min-width: 600px) {
+				.grid {
+					grid-template-columns: 1fr 1fr;
+					grid-template-areas:
+						"cabecalho navegacao"
+						"principal principal"
+						"rodape rodape";
+				}
+			}
+
+			@media (min-width: 1200px) {
+				.grid {
+					grid-template-columns: 1fr 1fr;
+					grid-template-areas:
+						"cabecalho cabecalho"
+						"navegacao principal"
+						"navegacao rodape";
+				}
+			}
+			header,
+			nav,
+			main,
+			footer {
+				border: 1px solid green;
+			}
+
+			header {
+				grid-area: cabecalho;
+			}
+			nav {
+				grid-area: navegacao;
+			}
+			main {
+				grid-area: principal;
+			}
+			footer {
+				grid-area: rodape;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid">
+			<header>Cabeçalho</header>
+			<nav>Home | Produtos | Login | Cadastro</nav>
+			<main>
+				<h2>Conteúdo do sistema</h2>
+				<p>
+					Lorem ipsum dolor sit amet consectetur adipisicing elit.
+					Voluptate facilis officia accusantium earum eaque tempore
+					cupiditate fugit. Maxime in expedita temporibus non dolore
+					facilis distinctio, iusto facere minima perferendis at?
+				</p>
+			</main>
+			<footer>Rodapé</footer>
+		</div>
+	</body>
+</html>

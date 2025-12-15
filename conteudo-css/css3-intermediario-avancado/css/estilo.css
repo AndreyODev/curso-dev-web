@@ -647,7 +647,7 @@ input.senha {
 
 /* Posicionamento (Prática)*/
 
-* {
+/* * {
   margin: 0;
   padding: 0;
 }
@@ -714,4 +714,48 @@ body {
   position: fixed;
   bottom: 0;
   left: 0;
+} */
+
+/* Exercício float */
+
+* {
+	margin: 0px;
+	padding: 0;
+}
+#container-principal {
+	width: 920px;
+	margin: 20px auto;
+	border: 1px solid red;
+}
+
+.conteudo-primario {
+	margin: 0px;
+	float: right;
+}
+.conteudo-primario ul {
+	list-style-type: none;
+}
+
+.conteudo-primario ul li {
+	margin: 10px;
+	width: 250px;
+	padding: 5px;
+	border: 1px solid #e5e5d5;
+}
+
+.conteudo-secundario {
+	width: 600px;
+	border-bottom: 1px solid #e5e5d5;
+}
+
+.conteudo-secundario p {
+	margin-bottom: 20px;
+}
+
+.conteudo-secundario h2 {
+	margin-bottom: 20px;
+}
+
+#sem-borda {
+	border: none;
 }
