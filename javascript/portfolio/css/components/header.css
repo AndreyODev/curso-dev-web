@@ -1,0 +1,89 @@
+.header {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	justify-self: center;
+	/* margin: 0 auto; */
+	min-height: 100vh;
+	padding-top: 100px;
+	align-items: center;
+	justify-items: center;
+}
+
+.header__right {
+	order: 2;
+	justify-self: end;
+}
+.header__right a img {
+	width: 100%;
+	max-width: 300px;
+	border-radius: 50px;
+	margin-top: 30px;
+	/* border: 1px solid red; */
+}
+
+.header__left {
+	order: 1;
+}
+
+.header__left h1 {
+	margin-top: 2rem;
+	font-size: 3rem;
+	transform: translateX(0);
+	transition: 0.5;
+}
+
+.header__left p {
+	margin-top: 20px;
+	font-size: 1.5rem;
+}
+
+.header__left .header__img {
+	display: flex;
+	margin-top: 20px;
+	gap: 30px;
+}
+
+.header__left .header__img .header__linkedin {
+	width: 50px;
+}
+.header__left .header__img .header__github {
+	width: 50px;
+}
+/* .header__left .header__img .header__instagram {
+	width: 50px;
+} */
+.header__left .header__img .header__whats {
+	width: 50px;
+}
+
+.header__left .header__cv {
+	border-radius: 10px;
+	display: inline-block;
+	padding: 10px 20px;
+	background: #d9d9d9;
+	margin-top: 20px;
+	font-size: 1.5rem;
+	color: #000000;
+}
+
+.header__techs {
+	display: flex;
+	gap: 150px;
+	order: 3;
+	width: max-content;
+	font-size: 2rem;
+	opacity: 0.6;
+	grid-column: span 2;
+	align-self: end;
+	margin-bottom: 10px;
+	animation: move 10s ease-in-out infinite alternate;
+}
+
+@keyframes move {
+	from {
+		transform: translateX(-250px);
+	}
+	to {
+		transform: translateX(250px);
+	}
+}

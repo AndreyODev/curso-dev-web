@@ -1,0 +1,6 @@
+@import "./style_global.css";
+
+@import "./components/navbar.css";
+@import "./components/header.css";
+@import "./components/about.css";
+@import "./components/projects.css";

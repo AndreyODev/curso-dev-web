@@ -1,0 +1,47 @@
+.navbar {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+	background: #d9d9d9;
+	box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+.navbar .navbar__content {
+	display: flex;
+	align-items: center;
+	margin: 0 auto;
+	height: 70px;
+}
+
+.navbar .logo {
+	flex-basis: 20%;
+	font-size: 1.5rem;
+	color: black;
+}
+
+.logo::before {
+	content: "< ";
+	color: #888888;
+}
+
+.logo::after {
+	content: " >";
+	color: #888888;
+}
+
+.navbar .navbar__links {
+	display: flex;
+	flex-basis: 80%;
+	justify-content: flex-end;
+}
+
+.navbar .navbar__links li {
+	font-size: 1.5rem;
+}
+.navbar .navbar__links li:not(:last-of-type) {
+	margin-right: 2rem;
+}
+.navbar .navbar__links a {
+	color: black;
+}
