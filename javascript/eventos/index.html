@@ -7,7 +7,35 @@
 		<link rel="stylesheet" href="style.css" />
 	</head>
 	<body>
-		<input id="entrada" type="text" placeholder="Nome" />
+		<form id="form" name="formulario">
+			<input type="text" name="entrada" placeholder="Nome" />
+			<br /><br />
+			<hr />
+			<select name="selecao" id="">
+				<option value="">--</option>
+				<option value="">Masculino</option>
+				<option value="">Feminino</option>
+			</select>
+			<hr />
+
+			<label>
+				<input type="radio" name="idade" value="0-18" />
+				0-18
+			</label>
+			<label>
+				<input type="radio" name="idade" value="0-18" />
+				30...
+			</label>
+			<hr />
+			<label>
+				<input type="checkbox" name="termo" value="termo" />
+				Aceitar termo
+			</label>
+
+			<input type="submit" value="Salvar" />
+			<input type="reset" value="Limpar" />
+		</form>
+		<!-- <input id="entrada" type="text" placeholder="Nome" /> -->
 		<!-- <button id="btn">Clique</button>
 		<h1 id="h1">Clique</h1> -->
 		<!-- <input id="entrada" type="text" /> -->
@@ -34,6 +62,6 @@
 		<!-- <button onclick="executar()">Clique aqui</button> -->
 		<!-- <button id="botao" botao-acao>Clique aqui</button> -->
 		<!-- <button id="btn">Clique aqui</button> -->
-		<script src="focus-blur.js"></script>
+		<script src="evento-formulario.js"></script>
 	</body>
 </html>
