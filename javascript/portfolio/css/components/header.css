@@ -2,23 +2,29 @@
 	display: grid;
 	grid-template-columns: 1fr 1fr;
 	justify-self: center;
-	/* margin: 0 auto; */
 	min-height: 100vh;
 	padding-top: 100px;
 	align-items: center;
 	justify-items: center;
+	position: relative;
+	background: var(--color-primary);
 }
 
 .header__right {
 	order: 2;
 	justify-self: end;
 }
-.header__right a img {
-	width: 100%;
-	max-width: 300px;
-	border-radius: 50px;
+.header__right img {
+	position: absolute;
+	width: 350px;
+	height: 350px;
+	border-radius: 50%;
+	top: 45%;
+	right: 5%;
+	transform: translateY(-50%);
 	margin-top: 30px;
-	/* border: 1px solid red; */
+	border: 3px solid rgba(59, 130, 246, 0.35);
+	box-shadow: 0 0 30px rgba(59, 130, 246, 0.55);
 }
 
 .header__left {
@@ -27,52 +33,66 @@
 
 .header__left h1 {
 	margin-top: 2rem;
-	font-size: 3rem;
-	transform: translateX(0);
-	transition: 0.5;
+	font-size: 2.5rem;
+	color: #f8fafc;
 }
 
 .header__left p {
 	margin-top: 20px;
-	font-size: 1.5rem;
+	font-size: 1rem;
+	color: #94a3b8;
 }
 
-.header__left .header__img {
+.header__icone {
 	display: flex;
 	margin-top: 20px;
-	gap: 30px;
+	gap: 20px;
 }
 
-.header__left .header__img .header__linkedin {
-	width: 50px;
-}
-.header__left .header__img .header__github {
-	width: 50px;
-}
-/* .header__left .header__img .header__instagram {
-	width: 50px;
-} */
-.header__left .header__img .header__whats {
-	width: 50px;
+.header__icone i {
+	font-size: 50px;
+	color: #ffffff;
+	opacity: 0.9;
+	transition: 0.3s;
 }
 
-.header__left .header__cv {
+.header__btn-cv {
 	border-radius: 10px;
 	display: inline-block;
 	padding: 10px 20px;
-	background: #d9d9d9;
+	background: #1572b6;
+	color: #ffffff;
 	margin-top: 20px;
-	font-size: 1.5rem;
-	color: #000000;
+	font-size: 1.2rem;
+	font-weight: 600;
+	margin-left: 20px;
+}
+.header__btn-projeto {
+	border-radius: 10px;
+	display: inline-block;
+	padding: 10px 20px;
+	background: #1572b6;
+	color: #ffffff;
+	margin-top: 20px;
+	font-size: 1.2rem;
+	font-weight: 600;
+}
+.header__btn-cv:hover {
+	background: #1e40af;
+}
+.header__btn-projeto:hover {
+	background: #1e40af;
+}
+
+.header__btn-cv i {
+	margin-right: 10px;
+	color: #ffffff;
 }
 
 .header__techs {
 	display: flex;
 	gap: 150px;
 	order: 3;
-	width: max-content;
-	font-size: 2rem;
-	opacity: 0.6;
 	grid-column: span 2;
 	align-self: end;
 	margin-bottom: 10px;
@@ -81,9 +101,108 @@
 
 @keyframes move {
 	from {
-		transform: translateX(-250px);
+		transform: translateX(-320px);
 	}
 	to {
-		transform: translateX(250px);
+		transform: translateX(320px);
+	}
+}
+
+.header__techs i {
+	font-size: 50px;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+/* Responsividade */
+@media (max-width: 1064px) {
+	.header {
+		grid-template-columns: 1fr 1fr;
+		padding: 100px 40px 40px;
+		text-align: center;
+		max-width: 1064px;
+	}
+
+	.header__left,
+	.header__right {
+		justify-self: center;
+	}
+	.header__left h1 {
+		font-size: 2.2rem;
+		margin-left: 30px;
+	}
+	.header__left p {
+		margin-left: 30px;
+	}
+	.header__icone {
+		margin-left: 30px;
+	}
+
+	.header__right img {
+		position: relative;
+		top: auto;
+		right: auto;
+		transform: none;
+		width: 280px;
+		height: 280px;
+		margin-bottom: 30px;
+	}
+
+	.header__techs {
+		grid-column: span 2;
+		gap: 60px;
+		/* animation: none; */
+		margin-top: 40px;
+	}
+	.header__techs {
+		margin-bottom: 10px;
+		animation: move 10s ease-in-out infinite alternate;
+	}
+
+	@keyframes move {
+		from {
+			transform: translateX(-250px);
+		}
+		to {
+			transform: translateX(200px);
+		}
+	}
+	.header__btn-cv {
+		border-radius: 10px;
+		display: inline-block;
+		padding: 10px 20px;
+		background: #1572b6;
+		color: #ffffff;
+		margin-top: 20px;
+		font-size: 1.2rem;
+		font-weight: 600;
+		margin-left: 20px;
+	}
+	/* .header__btn-projeto {
+	} */
+}
+
+@media (max-width: 768px) {
+	.header__left h1 {
+		font-size: 2rem;
+	}
+
+	.header__left p {
+		font-size: 0.95rem;
+	}
+
+	.header__btn-cv,
+	.header__btn-projeto {
+		font-size: 1rem;
+		padding: 10px 16px;
+		margin-left: 0;
+	}
+
+	.header__icone i {
+		font-size: 40px;
+	}
+
+	.header__techs i {
+		font-size: 40px;
 	}
 }

@@ -3,53 +3,95 @@
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
+		<title>AndreyODev</title>
 		<link rel="stylesheet" href="css/styles.css" />
+		<!-- Google Fonts - Poppins/Inter -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<!-- Remix Icon -->
+		<link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
 	</head>
 	<body>
-		<!-- NavBar -->
+		<!-- NAVBAR -->
 		<nav class="navbar">
 			<div class="navbar__content max_width">
-				<a class="logo" href="index.html"> AndreyODev </a>
+				<a class="logo" href="index.html">AndreyODev</a>
+
+				<!-- MENU DESKTOP -->
 				<ul class="navbar__links">
-					<li><a href="#header">Início</a></li>
-					<li><a href="#about">Sobre</a></li>
-					<li><a href="#projects">Projetos</a></li>
-					<li><a href="#skills">Habilidades</a></li>
-					<li><a href="#footer">Contato</a></li>
+					<li><a href="#header" class="nav__link active">Início</a></li>
+					<li><a href="#about" class="nav__link">Sobre</a></li>
+					<li><a href="#projects" class="nav__link">Projetos</a></li>
+					<li><a href="#skills" class="nav__link">Habilidades</a></li>
+					<li><a href="#footer" class="nav__link">Contato</a></li>
 				</ul>
+
+				<!-- BOTÃO MENU MOBILE -->
+				<div class="menu-toggle" id="menuToggle">
+					<i class="ri-menu-3-line"></i>
+				</div>
 			</div>
 		</nav>
-		<!-- / NavBar -->
+		<!-- /NAVBAR -->
+
+		<!-- MENU MOBILE (LATERAL) -->
+		<div class="menu-mobile" id="menuMobile">
+			<div class="menu-mobile__header">
+				<span>Menu</span>
+				<i class="ri-close-line" id="closeMenu"></i>
+			</div>
+
+			<ul class="menu-mobile__links">
+				<li>
+					<a href="#header"><i class="ri-home-4-line"></i>Início</a>
+				</li>
+				<li>
+					<a href="#about"><i class="ri-user-3-line"></i>Sobre</a>
+				</li>
+				<li>
+					<a href="#projects"><i class="ri-briefcase-4-line"></i>Projetos</a>
+				</li>
+				<li>
+					<a href="#skills"><i class="ri-code-s-slash-line"></i>Habilidades</a>
+				</li>
+				<li>
+					<a href="#footer"><i class="ri-phone-line"></i>Contato</a>
+				</li>
+			</ul>
+		</div>
+		<!-- /MENU MOBILE -->
 
 		<!-- Header -->
 		<header id="header" class="header max_width">
 			<div class="header__right">
-				<a href="#"><img src="img/eu.jpg" alt="foto do Andrey" /></a>
+				<img src="img/eu.jpg" alt="foto do Andrey" />
 			</div>
 
 			<div class="header__left">
 				<h1 id="title" class="title"></h1>
 				<p>O desenvolvedor responsável por realizar códigos simples e de qualidade</p>
-				<div class="header__img">
+				<div class="header__icone">
 					<a href="https://www.linkedin.com/in/andrey-oliveira-dev/" target="_blank"
-						><img class="header__linkedin" src="img/linkedin2.jpg" alt=""
-					/></a>
-					<a href="https://github.com/AndreyODev" target="_blank"
-						><img class="header__github" src="img/github.png" alt=""
-					/></a>
+						><i class="ri-linkedin-box-fill"></i
+					></a>
+					<a href="https://github.com/AndreyODev" target="_blank"><i class="ri-github-fill"></i></a>
 					<!-- <img class="header__instagram" src="img/instagram.png" alt="" /> -->
-					<a href="https://w.app/7cd3vn" target="_blank"
-						><img class="header__whats" src="img/whats.png" alt=""
-					/></a>
+					<a href="https://w.app/7cd3vn" target="_blank"><i class="ri-whatsapp-line"></i></a>
 				</div>
-				<a class="header__cv" href="img/andrey-oliveira-cv.pdf" target="_blank"> Baixar currículo </a>
+				<a class="header__btn-projeto" href="#projects"> <i class="ri-arrow-down-line"></i>Ver projeto </a>
+				<a class="header__btn-cv" href="img/andrey-oliveira-cv.pdf" target="_blank">
+					<i class="ri-download-2-fill"></i>Baixar currículo
+				</a>
 			</div>
 			<div class="header__techs">
-				<span>HTML</span>
-				<span>CSS</span>
-				<span>JavaScript</span>
-				<span>Git</span>
+				<i class="ri-html5-fill"></i>
+				<i class="ri-css3-fill"></i>
+				<i class="ri-javascript-fill"></i>
+				<i class="ri-nodejs-fill"></i>
 			</div>
 		</header>
 		<!-- / Header -->
@@ -83,7 +125,9 @@
 						<span class="about__docker">Docker</span>
 					</div>
 					<div class="about__cv">
-						<a href="img/andrey-oliveira-cv.pdf" target="_blank">Baixar CV</a>
+						<a href="img/andrey-oliveira-cv.pdf" target="_blank"
+							><i class="ri-download-2-fill"></i>Baixar CV</a
+						>
 					</div>
 				</div>
 
@@ -93,157 +137,163 @@
 			</div>
 		</section>
 		<!-- / About -->
-		<!-- Projetos -->
+
+		<!-- Projetcts -->
 		<section id="projects" class="projects max_width">
-			<!-- Content -->
 			<div class="projects__content">
 				<h2 class="projects-title">Projetos</h2>
-				<!-- Cards -->
-				<div class="projects__cards">
-					<!-- Projeto - RideX -->
-					<div class="projects__card">
-						<img src="img/ridex.jpg" alt="imagem do RideX" />
-						<h3>RideX</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim at, fuga, porro sapiente
-							architecto delectus earum aliquam, itaque et culpa eum perferendis impedit.
-						</p>
 
+				<div class="projects__cards" id="projectsList">
+					<div class="projects__card">
+						<img src="https://picsum.photos/400/200?1" />
+						<h3>RideX</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						<div class="projects__techs">
 							<span class="projects__js">JavaScript</span>
-							<span class="projects__html">Html</span>
-							<span class="projects__css">Css</span>
+							<span class="projects__html">HTML</span>
+							<span class="projects__css">CSS</span>
+							<div class="buttons">
+								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a href="#"><i class="ri-github-fill"></i> Código</a>
+							</div>
 						</div>
 					</div>
-					<!-- Projeto - RideX -->
 
-					<!-- Projeto - Zoom -->
 					<div class="projects__card">
-						<img src="img/zoom.jpg" alt="imagem do site do zoom" />
-						<h3>Clone do Zoom</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim at, fuga, porro sapiente
-							architecto delectus earum aliquam, itaque et culpa eum perferendis impedit.
-						</p>
+						<img src="https://picsum.photos/400/200?2" />
+						<h3>Clone Zoom</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						<div class="projects__techs">
-							<span class="projects__html">Html</span>
-							<span class="projects__css">Css</span>
+							<span class="projects__html">HTML</span>
+							<span class="projects__css">CSS</span>
+							<div class="buttons">
+								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a href="#"><i class="ri-github-fill"></i> Código</a>
+							</div>
 						</div>
 					</div>
-					<!-- / Projeto - Zoom -->
 
-					<!-- Projeto - Medium -->
 					<div class="projects__card">
-						<img src="img/medium.jpg" alt="imagem do site do medium" />
-						<h3>Clone do Medium</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim at, fuga, porro sapiente
-							architecto delectus earum aliquam, itaque et culpa eum perferendis impedit.
-						</p>
+						<img src="https://picsum.photos/400/200?3" />
+						<h3>Medium</h3>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						<div class="projects__techs">
-							<span class="projects__html">Html</span>
-							<span class="projects__css">Css</span>
+							<span class="projects__html">HTML</span>
+							<span class="projects__css">CSS</span>
+							<div class="buttons">
+								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a href="#"><i class="ri-github-fill"></i> Código</a>
+							</div>
 						</div>
 					</div>
-					<!-- / Projeto - Medium -->
 
-					<!-- Projeto - Agência Fake -->
 					<div class="projects__card">
-						<img src="img/agencia-fake.jpg" alt="imagem do agência fake" />
+						<img src="https://picsum.photos/400/200?4" />
 						<h3>Agência Fake</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim at, fuga, porro sapiente
-							architecto delectus earum aliquam, itaque et culpa eum perferendis impedit.
-						</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						<div class="projects__techs">
-							<span class="projects__html">Html</span>
-							<span class="projects__css">Css</span>
+							<span class="projects__html">HTML</span>
+							<span class="projects__css">CSS</span>
+							<div class="buttons">
+								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a href="#"><i class="ri-github-fill"></i> Código</a>
+							</div>
 						</div>
 					</div>
-					<!-- / Projeto - Agência Fake -->
 
-					<!-- Projeto - Notícias da cidade -->
 					<div class="projects__card">
-						<img src="img/noticias.jpg" alt="imagem do site notícias cidade" />
+						<img src="https://picsum.photos/400/200?4" />
 						<h3>Notícias da cidade</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim at, fuga, porro sapiente
-							architecto delectus earum aliquam, itaque et culpa eum perferendis impedit.
-						</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						<div class="projects__techs">
-							<span class="projects__html">Html</span>
-							<span class="projects__css">Css</span>
+							<span class="projects__html">HTML</span>
+							<span class="projects__css">CSS</span>
+							<div class="buttons">
+								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a href="#"><i class="ri-github-fill"></i> Código</a>
+							</div>
 						</div>
 					</div>
-					<!-- / Projeto - Notícias da cidade -->
 
-					<!-- Projeto - chalé hotel -->
 					<div class="projects__card">
-						<img src="img/chale-hotel.jpg" alt="imagem do chalé hotel" />
+						<img src="https://picsum.photos/400/200?4" />
 						<h3>Chalé Hotel</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim at, fuga, porro sapiente
-							architecto delectus earum aliquam, itaque et culpa eum perferendis impedit.
-						</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						<div class="projects__techs">
-							<span class="projects__html">Html</span>
-							<span class="projects__css">Css</span>
+							<span class="projects__html">HTML</span>
+							<span class="projects__css">CSS</span>
+							<div class="buttons">
+								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a href="#"><i class="ri-github-fill"></i> Código</a>
+							</div>
 						</div>
 					</div>
-					<!-- / Projeto - chalé hotel -->
 
-					<!-- Projeto - TecBlog -->
 					<div class="projects__card">
-						<img src="img/tecblog.jpg" alt="imagem do tecblog" />
+						<img src="https://picsum.photos/400/200?4" />
 						<h3>TecBlog</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim at, fuga, porro sapiente
-							architecto delectus earum aliquam, itaque et culpa eum perferendis impedit.
-						</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						<div class="projects__techs">
-							<span class="projects__html">Html</span>
-							<span class="projects__css">Css</span>
+							<span class="projects__html">HTML</span>
+							<span class="projects__css">CSS</span>
+							<div class="buttons">
+								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a href="#"><i class="ri-github-fill"></i> Código</a>
+							</div>
 						</div>
 					</div>
-					<!-- / Projeto - TecBlog -->
 
-					<!-- Projeto - Anna Bella -->
 					<div class="projects__card">
-						<img src="img/AnnaBella.jpg" alt="modelo Anna Bella" />
+						<img src="https://picsum.photos/400/200?4" />
 						<h3>Modelo Anna Bella</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim at, fuga, porro sapiente
-							architecto delectus earum aliquam, itaque et culpa eum perferendis impedit.
-						</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						<div class="projects__techs">
-							<span class="projects__html">Html</span>
-							<span class="projects__css">Css</span>
+							<span class="projects__html">HTML</span>
+							<span class="projects__css">CSS</span>
+							<div class="buttons">
+								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a href="#"><i class="ri-github-fill"></i> Código</a>
+							</div>
 						</div>
 					</div>
-					<!-- / Projeto - Anna Bella -->
 
-					<!-- Projeto - Unes-->
 					<div class="projects__card">
-						<img src="img/unes.jpg" alt="Universidade Unes" />
+						<img src="https://picsum.photos/400/200?4" />
 						<h3>Universidade Unes</h3>
-						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim at, fuga, porro sapiente
-							architecto delectus earum aliquam, itaque et culpa eum perferendis impedit.
-						</p>
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 						<div class="projects__techs">
-							<span class="projects__html">Html</span>
+							<span class="projects__html">HTML</span>
+							<span class="projects__css">CSS</span>
+							<div class="buttons">
+								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a href="#"><i class="ri-github-fill"></i> Código</a>
+							</div>
 						</div>
 					</div>
-					<!-- / Projeto - Anna Bella -->
 				</div>
-				<!-- / Cards -->
+
+				<div class="projects__more">
+					<button id="openModal">Ver mais projetos</button>
+				</div>
 			</div>
-			<!-- / Content -->
 		</section>
-		<!-- / Projetos -->
+		<!-- / Projetcts -->
+		<!-- MODAL -->
+		<div class="modal" id="modal">
+			<div class="modal-content">
+				<button class="modal-close" id="closeModal" aria-label="Fechar modal">
+					<i class="ri-close-line"></i>
+				</button>
+				<h2>Todos os Projetos</h2>
+
+				<div class="modal-projects" id="modalProjects"></div>
+			</div>
+		</div>
+		<!-- / MODAL -->
 
 		<!-- Script -->
 		<script src="js/index.js"></script>
+		<script src="js/modal.js"></script>
 		<!-- / Script -->
 	</body>
 </html>

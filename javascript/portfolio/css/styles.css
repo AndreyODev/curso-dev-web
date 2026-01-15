@@ -1,4 +1,5 @@
 @import "./style_global.css";
+@import "./variables.css";
 
 @import "./components/navbar.css";
 @import "./components/header.css";
