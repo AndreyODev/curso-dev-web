@@ -145,21 +145,45 @@
 }
 
 /* RESPONSIVIDADE */
+@media (min-width: 1025px) and (max-width: 1124px) {
+	.navbar__content {
+		max-width: 95%;
+	}
+}
+@media (max-width: 1024px) {
+	.navbar__content {
+		max-width: 95%;
+	}
+}
 
-/* MOBILE */
-@media (max-width: 900px) {
+@media (max-width: 768px) {
+	.navbar__content {
+		max-width: 100%;
+	}
+	.menu-toggle {
+		display: block;
+	}
 	.navbar__links {
 		display: none;
 	}
 
-	.menu-toggle {
-		display: block;
+	.navbar__content {
+		padding: 0 20px;
 	}
 }
 
-/* DESKTOP */
-@media (min-width: 901px) {
-	.menu-mobile {
+@media (max-width: 480px) {
+	.navbar__content {
+		max-width: 100%;
+	}
+	.menu-toggle {
+		display: block;
+	}
+	.navbar__links {
 		display: none;
+	}
+
+	.navbar__content {
+		padding: 0 20px;
 	}
 }
