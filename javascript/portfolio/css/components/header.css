@@ -98,27 +98,37 @@
 .header__btn-cv {
 	border-radius: 10px;
 	padding: 10px 20px;
-	background: #1572b6;
+	background: #13233a;
 	color: #ffffff;
 	margin-top: 20px;
 	font-size: 1.2rem;
 	font-weight: 600;
 	margin-left: 20px;
+	border: 1px solid #f8fafc;
 }
 .header__btn-projeto {
 	border-radius: 10px;
 	padding: 10px 20px;
-	background: #1572b6;
+	background: #13233a;
 	color: #ffffff;
 	margin-top: 20px;
 	font-size: 1.2rem;
 	font-weight: 600;
+	border: 1px solid #f8fafc;
 }
 .header__btn-cv:hover {
-	background: #1e40af;
+	background: #1572b6;
+	box-shadow:
+		0 0 30px rgba(59, 130, 246, 0.55),
+		0 0 80px rgba(21, 114, 182, 0.45);
+	border: 1px solid #1572b6;
 }
 .header__btn-projeto:hover {
-	background: #1e40af;
+	background: #1572b6;
+	box-shadow:
+		0 0 30px rgba(59, 130, 246, 0.55),
+		0 0 80px rgba(21, 114, 182, 0.45);
+	border: 1px solid #1572b6;
 }
 
 .header__btn-cv i {
