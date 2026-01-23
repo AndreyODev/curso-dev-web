@@ -165,10 +165,13 @@
 @media (min-width: 1025px) and (max-width: 1124px) {
 	.header__content {
 		grid-template-columns: 1fr 1fr;
-		padding: 150px 40px 40px;
+		padding-top: 200px;
+		padding-left: 20px;
+		padding-right: 20px;
 		text-align: center;
 		max-width: 100%;
-		min-height: 100dvh;
+		min-height: 100vh;
+		align-items: start;
 	}
 
 	.header__left h1 {
@@ -193,10 +196,12 @@
 
 	.header__techs {
 		gap: 100px;
+		margin-top: auto;
+		margin-bottom: 20px;
 	}
 
 	.header__techs i {
-		font-size: 40px;
+		font-size: 50px;
 	}
 	.header__btn-cv {
 		padding: 10px 10px;
@@ -209,10 +214,13 @@
 @media (max-width: 1024px) {
 	.header__content {
 		grid-template-columns: 1fr 1fr;
-		padding: 150px 40px 40px;
+		padding-top: 200px;
+		padding-left: 20px;
+		padding-right: 20px;
 		text-align: center;
 		max-width: 100%;
-		min-height: 100dvh;
+		min-height: 100vh;
+		align-items: start;
 	}
 
 	.header__left h1 {
@@ -237,6 +245,7 @@
 
 	.header__techs {
 		gap: 100px;
+		margin-bottom: 20px;
 	}
 
 	.header__techs i {
@@ -279,7 +288,7 @@
 		width: 240px;
 		height: 240px;
 		transform: none;
-		margin: 40px auto 30px;
+		margin: 20px auto 30px;
 		margin-bottom: 0px;
 	}
 
@@ -340,12 +349,10 @@
 @media (min-width: 481px) and (max-width: 656px) {
 	.header__content {
 		grid-template-columns: 1fr;
-		padding: 110px 10px 20px;
-		text-align: center;
-		row-gap: 30px;
-		max-width: 90%;
+		padding: 100px 20px 20px;
+		max-width: 100%;
 		min-height: 100dvh;
-		text-align: center;
+		align-items: start;
 	}
 
 	.header__left {
@@ -391,7 +398,7 @@
 
 	.header__techs {
 		gap: 40px;
-		margin-top: 20px;
+		margin-top: 60px;
 	}
 
 	.header__techs i {
@@ -411,10 +418,10 @@
 	.header__content {
 		grid-template-columns: 1fr;
 		padding: 110px 10px 20px;
-		row-gap: 30px;
 		max-width: 90%;
+		/* max-width: 100%; */
 		min-height: 100dvh;
-		text-align: center;
+		align-items: start;
 	}
 
 	.header__left {
@@ -459,7 +466,7 @@
 
 	.header__techs {
 		gap: 40px;
-		margin-top: 20px;
+		margin-top: 50px;
 	}
 
 	.header__techs i {
