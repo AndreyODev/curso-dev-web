@@ -5,7 +5,7 @@
 }
 body {
 	font-family: "Inter", sans-serif;
-	background: var(--color-primary);
+	/* background: var(--color-primary); */
 	position: relative;
 }
 a {
@@ -15,7 +15,33 @@ a {
 ul {
 	list-style-type: none;
 }
+ol {
+	list-style-type: none;
+}
 .max_width {
 	width: 100%;
 	max-width: 1064px;
+}
+
+.bg-primary {
+	background: var(--bg-primary);
+}
+
+.bg-secondary {
+	background: var(--bg-secondary);
+}
+
+.borda-superior {
+	position: relative;
+}
+
+.borda-superior::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 70%;
+	height: 1px;
+	background: linear-gradient(to right, transparent, #ffffff, transparent);
 }
