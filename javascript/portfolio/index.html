@@ -14,6 +14,9 @@
 		/>
 		<!-- Remix Icon -->
 		<link href="https://cdn.jsdelivr.net/npm/remixicon@4.8.0/fonts/remixicon.css" rel="stylesheet" />
+
+		<!-- Font awesome icon -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 	</head>
 	<body>
 		<!-- NAVBAR -->
@@ -27,7 +30,7 @@
 					<li><a href="#about" class="nav__link">Sobre</a></li>
 					<li><a href="#projects" class="nav__link">Projetos</a></li>
 					<li><a href="#skills" class="nav__link">Habilidades</a></li>
-					<li><a href="#footer" class="nav__link">Contato</a></li>
+					<li><a href="#contact" class="nav__link">Contato</a></li>
 				</ul>
 
 				<!-- BOTÃO MENU MOBILE -->
@@ -66,50 +69,63 @@
 		<!-- /MENU MOBILE -->
 
 		<!-- Header -->
-		<header id="header" class="header max_width">
-			<div class="header__right">
-				<img src="img/eu.jpg" alt="foto do Andrey" />
-			</div>
-
-			<div class="header__left">
-				<h1 id="title" class="title"></h1>
-				<p>O desenvolvedor responsável por realizar códigos simples e de qualidade</p>
-				<div class="header__icone">
-					<a href="https://www.linkedin.com/in/andrey-oliveira-dev/" target="_blank"
-						><i class="ri-linkedin-box-fill"></i
-					></a>
-					<a href="https://github.com/AndreyODev" target="_blank"><i class="ri-github-fill"></i></a>
-					<!-- <img class="header__instagram" src="img/instagram.png" alt="" /> -->
-					<a href="https://w.app/7cd3vn" target="_blank"><i class="ri-whatsapp-line"></i></a>
+		<header id="header" class="header bg-primary">
+			<div class="header__content max_width">
+				<div class="header__right">
+					<img src="img/eu.png" alt="foto do Andrey" />
 				</div>
-				<a class="header__btn-projeto" href="#projects"> <i class="ri-arrow-down-line"></i>Ver projeto </a>
-				<a class="header__btn-cv" href="img/andrey-oliveira-cv.pdf" target="_blank">
-					<i class="ri-download-2-fill"></i>Baixar currículo
-				</a>
-			</div>
-			<div class="header__techs">
-				<i class="ri-html5-fill"></i>
-				<i class="ri-css3-fill"></i>
-				<i class="ri-javascript-fill"></i>
-				<i class="ri-nodejs-fill"></i>
+
+				<div class="header__left">
+					<h1 id="title" class="title"></h1>
+					<p>O desenvolvedor responsável por realizar códigos simples e de qualidade</p>
+					<div class="header__icone">
+						<a href="https://www.linkedin.com/in/andrey-oliveira-dev/" target="_blank"
+							><i class="ri-linkedin-fill"></i
+						></a>
+						<a href="https://github.com/AndreyODev" target="_blank"><i class="ri-github-fill"></i></a>
+						<!-- <img class="header__instagram" src="img/instagram.png" alt="" /> -->
+						<a href="https://w.app/7cd3vn" target="_blank"><i class="ri-whatsapp-line"></i></a>
+						<a
+							href="https://mail.google.com/mail/u/0/?fs=1&to=andreyoliveira72005@gmail.com&su=Oportunidade&body=Ola+Andrey,%0D%0AVi+seu+portfolio+e+gostaria+de+conversar.&tf=cm"
+						>
+							<i class="ri-mail-line"></i>
+						</a>
+					</div>
+					<div class="header-buttons">
+						<a class="header__btn-projeto" href="#projects">
+							<i class="ri-arrow-down-line"></i>Ver Projeto
+						</a>
+						<a class="header__btn-cv" href="img/andrey-oliveira-cv.pdf" target="_blank">
+							<i class="ri-download-2-fill"></i>Baixar Currículo
+						</a>
+					</div>
+				</div>
+				<div class="header__techs">
+					<i class="ri-html5-fill"></i>
+					<i class="ri-css3-fill"></i>
+					<i class="ri-javascript-fill"></i>
+					<i class="ri-nodejs-fill"></i>
+				</div>
 			</div>
 		</header>
 		<!-- / Header -->
 
 		<!-- About -->
-		<section id="about" class="about max_width">
-			<div class="about__content">
+		<section id="about" class="about bg-secondary borda-superior">
+			<div class="about__content max_width">
 				<div class="about__right">
 					<h2>Sobre</h2>
 
-					<p>
+					<p class="about-paragrafo1">
 						Olá! Me chamo Andrey, tenho 20 anos e estou no 5° período de Engenharia de Software. Atualmente,
-						minhas habilidades estão concentradas no Front-End:
+						minhas habilidades estão concentradas em:
 					</p>
 					<div class="about__techs">
-						<span class="about__javascript">JavaScript</span>
 						<span class="about__html">Html</span>
 						<span class="about__css">Css</span>
+						<span class="about__javascript">JavaScript</span>
+						<span class="about__react">React</span>
+						<span class="about__nodejs">Node.js</span>
 					</div>
 
 					<p>
@@ -117,10 +133,10 @@
 						objetivo é me tornar um desenvolvedor Full Stack, então tenho como meta estudar:
 					</p>
 					<div class="about__techs">
-						<span class="about__nodejs">Node.js</span>
-						<span class="about__typescript">TypeScript</span>
-						<span class="about__react">React</span>
 						<span class="about__next">Next</span>
+						<span class="about__typescript">TypeScript</span>
+						<span class="about__typescript">Banco de dados</span>
+						<span class="about__typescript">Apis</span>
 						<span class="about__tailwind">Tailwind</span>
 						<span class="about__docker">Docker</span>
 					</div>
@@ -139,8 +155,8 @@
 		<!-- / About -->
 
 		<!-- Projetcts -->
-		<section id="projects" class="projects max_width">
-			<div class="projects__content">
+		<section id="projects" class="projects bg-primary borda-superior">
+			<div class="projects__content max_width">
 				<h2 class="projects-title">Projetos</h2>
 
 				<div class="projects__cards" id="projectsList">
@@ -153,7 +169,19 @@
 							<span class="projects__html">HTML</span>
 							<span class="projects__css">CSS</span>
 							<div class="buttons">
-								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a
+									href="#"
+									class="ver-mais"
+									data-title="RideX"
+									data-description="Projeto clone da interface do Zoom usando HTML, CSS e JavaScript."
+									data-images='[
+		"https://picsum.photos/800/400?zoom1",
+		"https://picsum.photos/800/400?zoom2",
+		"https://picsum.photos/800/400?zoom3"
+	]'
+								>
+									<i class="ri-eye-fill"></i> Ver mais
+								</a>
 								<a href="#"><i class="ri-github-fill"></i> Código</a>
 							</div>
 						</div>
@@ -167,7 +195,19 @@
 							<span class="projects__html">HTML</span>
 							<span class="projects__css">CSS</span>
 							<div class="buttons">
-								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a
+									href="#"
+									class="ver-mais"
+									data-title="Clone Zoom"
+									data-description="Projeto clone da interface do Zoom usando HTML, CSS e JavaScript."
+									data-images='[
+		"https://picsum.photos/800/400?zoom1",
+		"https://picsum.photos/800/400?zoom2",
+		"https://picsum.photos/800/400?zoom3"
+	]'
+								>
+									<i class="ri-eye-fill"></i> Ver mais
+								</a>
 								<a href="#"><i class="ri-github-fill"></i> Código</a>
 							</div>
 						</div>
@@ -181,7 +221,19 @@
 							<span class="projects__html">HTML</span>
 							<span class="projects__css">CSS</span>
 							<div class="buttons">
-								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a
+									href="#"
+									class="ver-mais"
+									data-title="Medium"
+									data-description="Projeto clone da interface do Zoom usando HTML, CSS e JavaScript."
+									data-images='[
+		"https://picsum.photos/800/400?zoom1",
+		"https://picsum.photos/800/400?zoom2",
+		"https://picsum.photos/800/400?zoom3"
+	]'
+								>
+									<i class="ri-eye-fill"></i> Ver mais
+								</a>
 								<a href="#"><i class="ri-github-fill"></i> Código</a>
 							</div>
 						</div>
@@ -195,7 +247,19 @@
 							<span class="projects__html">HTML</span>
 							<span class="projects__css">CSS</span>
 							<div class="buttons">
-								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a
+									href="#"
+									class="ver-mais"
+									data-title="Agência Fake"
+									data-description="Projeto clone da interface do Zoom usando HTML, CSS e JavaScript."
+									data-images='[
+		"https://picsum.photos/800/400?zoom1",
+		"https://picsum.photos/800/400?zoom2",
+		"https://picsum.photos/800/400?zoom3"
+	]'
+								>
+									<i class="ri-eye-fill"></i> Ver mais
+								</a>
 								<a href="#"><i class="ri-github-fill"></i> Código</a>
 							</div>
 						</div>
@@ -209,7 +273,19 @@
 							<span class="projects__html">HTML</span>
 							<span class="projects__css">CSS</span>
 							<div class="buttons">
-								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a
+									href="#"
+									class="ver-mais"
+									data-title="Noícias da cidade"
+									data-description="Projeto clone da interface do Zoom usando HTML, CSS e JavaScript."
+									data-images='[
+		"https://picsum.photos/800/400?zoom1",
+		"https://picsum.photos/800/400?zoom2",
+		"https://picsum.photos/800/400?zoom3"
+	]'
+								>
+									<i class="ri-eye-fill"></i> Ver mais
+								</a>
 								<a href="#"><i class="ri-github-fill"></i> Código</a>
 							</div>
 						</div>
@@ -223,7 +299,19 @@
 							<span class="projects__html">HTML</span>
 							<span class="projects__css">CSS</span>
 							<div class="buttons">
-								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a
+									href="#"
+									class="ver-mais"
+									data-title="Chalé Hotel"
+									data-description="Projeto clone da interface do Zoom usando HTML, CSS e JavaScript."
+									data-images='[
+		"https://picsum.photos/800/400?zoom1",
+		"https://picsum.photos/800/400?zoom2",
+		"https://picsum.photos/800/400?zoom3"
+	]'
+								>
+									<i class="ri-eye-fill"></i> Ver mais
+								</a>
 								<a href="#"><i class="ri-github-fill"></i> Código</a>
 							</div>
 						</div>
@@ -237,7 +325,19 @@
 							<span class="projects__html">HTML</span>
 							<span class="projects__css">CSS</span>
 							<div class="buttons">
-								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a
+									href="#"
+									class="ver-mais"
+									data-title="TecBlog"
+									data-description="Projeto clone da interface do Zoom usando HTML, CSS e JavaScript."
+									data-images='[
+		"https://picsum.photos/800/400?zoom1",
+		"https://picsum.photos/800/400?zoom2",
+		"https://picsum.photos/800/400?zoom3"
+	]'
+								>
+									<i class="ri-eye-fill"></i> Ver mais
+								</a>
 								<a href="#"><i class="ri-github-fill"></i> Código</a>
 							</div>
 						</div>
@@ -251,7 +351,19 @@
 							<span class="projects__html">HTML</span>
 							<span class="projects__css">CSS</span>
 							<div class="buttons">
-								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a
+									href="#"
+									class="ver-mais"
+									data-title="Modelo Anna Bella"
+									data-description="Projeto clone da interface do Zoom usando HTML, CSS e JavaScript."
+									data-images='[
+		"https://picsum.photos/800/400?zoom1",
+		"https://picsum.photos/800/400?zoom2",
+		"https://picsum.photos/800/400?zoom3"
+	]'
+								>
+									<i class="ri-eye-fill"></i> Ver mais
+								</a>
 								<a href="#"><i class="ri-github-fill"></i> Código</a>
 							</div>
 						</div>
@@ -265,31 +377,195 @@
 							<span class="projects__html">HTML</span>
 							<span class="projects__css">CSS</span>
 							<div class="buttons">
-								<a href="#"><i class="ri-eye-fill"></i> Ver projeto</a>
+								<a
+									href="#"
+									class="ver-mais"
+									data-title="Universidade Unes"
+									data-description="Projeto clone da interface do Zoom usando HTML, CSS e JavaScript."
+									data-images='[
+		"https://picsum.photos/800/400?zoom1",
+		"https://picsum.photos/800/400?zoom2",
+		"https://picsum.photos/800/400?zoom3",
+		"https://picsum.photos/800/400?zoom3"
+	]'
+								>
+									<i class="ri-eye-fill"></i> Ver mais
+								</a>
 								<a href="#"><i class="ri-github-fill"></i> Código</a>
 							</div>
 						</div>
 					</div>
+					<i class="arrow-left ri-arrow-left-s-line"></i>
+					<i class="arrow-right ri-arrow-right-s-line"></i>
+
+					<div class="carousel-progress">
+						<div class="progress-bar active"></div>
+						<div class="progress-bar"></div>
+						<div class="progress-bar"></div>
+						<div class="progress-bar"></div>
+						<div class="progress-bar"></div>
+						<div class="progress-bar"></div>
+						<div class="progress-bar"></div>
+					</div>
 				</div>
 
-				<div class="projects__more">
+				<!-- <div class="projects__more">
 					<button id="openModal">Ver mais projetos</button>
-				</div>
+				</div> -->
 			</div>
 		</section>
 		<!-- / Projetcts -->
-		<!-- MODAL -->
-		<div class="modal" id="modal">
-			<div class="modal-content">
-				<button class="modal-close" id="closeModal" aria-label="Fechar modal">
-					<i class="ri-close-line"></i>
-				</button>
-				<h2>Todos os Projetos</h2>
+		<!-- Modal projects-->
+		<div class="modal-overlay" id="projectModal">
+			<div class="modal">
+				<button class="modal-close" id="closeModal">&times;</button>
 
-				<div class="modal-projects" id="modalProjects"></div>
+				<div class="modal-content">
+					<div class="modal-text">
+						<h2 id="modalTitle">Título do Projeto</h2>
+						<p id="modalDescription">Descrição do projeto aqui...</p>
+					</div>
+
+					<div class="modal-gallery" id="modalGallery">
+						<!-- imagens entram via JS -->
+					</div>
+				</div>
 			</div>
 		</div>
+		<!-- / Modal projects -->
+
+		<!-- MODAL -->
+		<!-- <div class="modal" id="modal">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h2>Todos os Projetos</h2>
+
+					<button class="modal-close" id="closeModal" aria-label="Fechar modal">
+						<i class="ri-close-line"></i>
+					</button>
+				</div>
+
+				<div class="modal-body">
+					<div class="modal-projects" id="modalProjects"></div>
+				</div>
+			</div>
+		</div> -->
 		<!-- / MODAL -->
+
+		<!-- Skills -->
+		<section id="skills" class="skills-orbit bg-secondary borda-superior">
+			<h2>Skills</h2>
+
+			<div class="skills__content max_width">
+				<!-- Ícone central -->
+				<div class="center-icon">
+					<i class="fa-solid fa-code"></i>
+					<span>TypeScript</span>
+				</div>
+
+				<!-- Ícones orbitando -->
+				<div class="orbit">
+					<div class="skill-item">
+						<i class="html fa-brands fa-html5"></i>
+						<span>HTML</span>
+					</div>
+					<div class="skill-item">
+						<i class="fa-brands fa-css3-alt"></i>
+						<span>CSS</span>
+					</div>
+					<div class="skill-item">
+						<i class="fa-brands fa-js"></i>
+						<span>JavaScript</span>
+					</div>
+					<div class="skill-item">
+						<i class="fa-brands fa-git-alt"></i>
+						<span>Git</span>
+					</div>
+					<div class="skill-item">
+						<i class="fa-brands fa-node-js"></i>
+						<span>Node.js</span>
+					</div>
+					<div class="skill-item">
+						<i class="fa-solid fa-mobile-screen-button"></i>
+						<span>FlutterFlow</span>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- / Skills -->
+
+		<!-- Contato -->
+		<section id="contact" class="contato bg-primary borda-superior">
+			<div class="contact__content">
+				<h2>Criando soluções de qualidade</h2>
+				<p>
+					Do conceito inicial ao resultado final, atuo no desenvolvimento de soluções digitais com foco em
+					arquitetura, organização e qualidade de código. Utilizo boas práticas para criar aplicações limpas,
+					eficientes e fáceis de manter, reduzindo complexidade técnica e garantindo entregas profissionais,
+					estáveis e prontas para escalar. Todo o processo é pensado para unir desempenho, usabilidade e
+					consistência no resultado final.
+				</p>
+				<span>Opções de contato</span>
+				<i class="ri-arrow-down-fill"></i>
+				<div class="contact-icone">
+					<a href=""><i class="ri-linkedin-fill"></i></a>
+					<a href=""><i class="ri-github-fill"></i></a>
+					<a href=""><i class="ri-whatsapp-line"></i></a>
+					<a
+						href="https://mail.google.com/mail/u/0/?fs=1&to=andreyoliveira72005@gmail.com&su=Oportunidade&body=Ola+Andrey,%0D%0AVi+seu+portfolio+e+gostaria+de+conversar.&tf=cm"
+						title="Enviar e-mail"
+					>
+						<i class="ri-mail-line"></i>
+					</a>
+				</div>
+			</div>
+		</section>
+		<!-- / Contato -->
+		<!-- footer -->
+		<footer id="footer" class="bg-secondary borda-superior">
+			<div class="footer__content max_width">
+				<div class="footer-contact">
+					<h3>AndreyODev</h3>
+					<div class="icones">
+						<a href=""><i class="ri-linkedin-fill"></i></a>
+						<a href=""><i class="ri-github-fill"></i></a>
+						<a href=""><i class="ri-whatsapp-line"></i></a>
+					</div>
+					<a
+						href="https://mail.google.com/mail/u/0/?fs=1&to=andreyoliveira72005@gmail.com&su=Oportunidade&body=Ola+Andrey,%0D%0AVi+seu+portfolio+e+gostaria+de+conversar.&tf=cm"
+						target="_blank"
+						class="email"
+					>
+						andreyoliveira72005@gmail.com
+					</a>
+				</div>
+
+				<div class="footer-menu">
+					<h3>Menu</h3>
+					<ul class="nav">
+						<li><a href="#header">Início</a></li>
+						<li><a href="#about">Sobre</a></li>
+						<li><a href="#projects">Projetos</a></li>
+						<li><a href="#skills">Habilidades</a></li>
+						<li><a href="#contact">Contato</a></li>
+					</ul>
+				</div>
+
+				<div class="footer-techs">
+					<h3>Tecnologias</h3>
+					<ol>
+						<li>HTML</li>
+						<li>CSS</li>
+						<li>JavaScript</li>
+						<li>Sass</li>
+						<li>Node.js</li>
+						<li>React</li>
+					</ol>
+				</div>
+			</div>
+			<p>© 2026 Andrey Oliveira. Todos os direitos reservados.</p>
+		</footer>
+		<!-- footer -->
 
 		<!-- BackToTop - setaTopo -->
 		<button id="backToTop">
