@@ -94,7 +94,16 @@
 @media (min-width: 1025px) and (max-width: 1124px) {
 	.about__content {
 		max-width: 95%;
+		grid-template-columns: 1fr 1fr;
 	}
+
+	.about__right p {
+		font-size: 1rem;
+		color: #94a3b8;
+		text-align: justify;
+		margin-top: 10px;
+	}
+
 	.about__techs {
 		display: flex;
 		align-items: center;
