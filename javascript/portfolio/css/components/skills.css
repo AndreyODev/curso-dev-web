@@ -1,0 +1,128 @@
+.skills-orbit {
+	text-align: center;
+	padding-top: 100px;
+	color: white;
+	min-height: 100vh;
+}
+
+.skills-orbit h2 {
+	font-size: 3rem;
+	margin-bottom: 40px;
+}
+
+.skills-orbit h2::before {
+	content: "[ ";
+	color: #1572b6;
+}
+
+.skills-orbit h2::after {
+	content: " ]";
+	color: #1572b6;
+}
+
+.skills__content {
+	position: relative;
+	width: 350px;
+	height: 350px;
+	margin: 0 auto;
+}
+
+/* Ícone central */
+.center-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background: #13233a;
+	width: 120px;
+	height: 120px;
+	border-radius: 50%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	font-size: 15px;
+	color: #3178c6;
+	box-shadow: 0 0 12px rgba(66, 165, 245, 0.6);
+}
+
+/* Círculo da órbita */
+.orbit {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	animation: orbit-rotate 18s linear infinite;
+}
+
+/* Cada skill */
+.skill-item {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80px;
+	height: 80px;
+	background: #13233a;
+	border-radius: 50%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: 28px;
+	border: 3px solid #1572b6;
+	color: white;
+}
+/* .skill-item .html {
+	color: #f7df1e;
+} */
+/* Texto */
+.skill-item span {
+	font-size: 10px;
+	margin-top: 4px;
+}
+
+/* Animação de rotação */
+@keyframes orbit-rotate {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+/* POSICIONAMENTO extremamente simples (7 itens distribuídos) */
+.skill-item:nth-child(1) {
+	transform: translate(-50%, -50%) rotate(0deg) translate(120px);
+	color: #e34f26;
+	box-shadow: 0 0 12px rgba(66, 165, 245, 0.6);
+}
+
+.skill-item:nth-child(2) {
+	transform: translate(-50%, -50%) rotate(60deg) translate(120px);
+	color: #1572b6;
+	box-shadow: 0 0 12px rgba(66, 165, 245, 0.6);
+}
+
+.skill-item:nth-child(3) {
+	transform: translate(-50%, -50%) rotate(120deg) translate(120px);
+	color: #f7df1e;
+	box-shadow: 0 0 12px rgba(66, 165, 245, 0.6);
+}
+
+.skill-item:nth-child(4) {
+	transform: translate(-50%, -50%) rotate(180deg) translate(120px);
+	color: #f05032;
+	box-shadow: 0 0 12px rgba(66, 165, 245, 0.6);
+}
+
+.skill-item:nth-child(5) {
+	transform: translate(-50%, -50%) rotate(240deg) translate(120px);
+	color: #3c873a;
+	box-shadow: 0 0 12px rgba(66, 165, 245, 0.6);
+}
+
+.skill-item:nth-child(6) {
+	transform: translate(-50%, -50%) rotate(300deg) translate(120px);
+	color: #42a5f5;
+	box-shadow: 0 0 12px rgba(66, 165, 245, 0.6);
+}
