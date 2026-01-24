@@ -2,3 +2,10 @@
 	--color-primary: #0f172a;
 	--color-secondary: #2563eb;
 }
+
+:root {
+	--bg-primary: #0f172a;
+	--bg-secondary: #131f3a; /* um tom mais escuro */
+	--bg-alt: #020617;
+	--bg-footer: #000814; /* footer bem destacado */
+}
