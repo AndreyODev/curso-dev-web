@@ -28,6 +28,9 @@ const hostname = "localhost";
 const port = 3001;
 
 const server = createServer((req, res) => {
+	// Cors
+	res.setHeader("Access-Control-Allow-Origin", "*");
+
 	// Cabeçalhos da resposta(response), no caso é um forma de informar qual é o tipo de conteúdo enviado
 	res.setHeader("Content-type", "application/json");
 	// Status HTTP, serve para dizer o resultado da requisição. Exemplo, 200 diz que foi bem sucedida, 404 diz que não foi encontrado e 500 diz que teve erro no servidor
