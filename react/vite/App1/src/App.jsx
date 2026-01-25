@@ -3,8 +3,11 @@
 
 import Header from "./components/Header.jsx";
 import Corpo from "./components/Corpo.jsx";
+import Dados from "./components/Dados.jsx";
 
 function App() {
+  const github = "andreyODev const";
+  const instagram = "andrey.olliveira const";
   // const instagram = () => {
   //   return "@andreyolliveira";
   // };
@@ -25,6 +28,8 @@ function App() {
     <>
       <Header />
       <Corpo />
+      <Dados github="andreyODev" instagram="@andrey.olliveira" />
+      <Dados github={github} instagram={instagram} />
     </>
   );
 }
