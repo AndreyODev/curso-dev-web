@@ -12,13 +12,14 @@ let intervalo;
 function atualizarQuantidade() {
 	if (window.innerWidth <= 480) {
 		cardsPorSlide = 1;
-	} else if (window.innerWidth <= 909) {
+	} else if (window.innerWidth <= 677) {
+		cardsPorSlide = 1;
+	} else if (window.innerWidth <= 1024) {
 		cardsPorSlide = 2;
 	} else {
 		cardsPorSlide = 3;
 	}
 }
-
 // ===== CRIA AS BARRAS =====
 function criarBarras() {
 	progressContainer.innerHTML = "";
