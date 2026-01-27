@@ -1,6 +1,7 @@
 // Aula 8
 import React from "react";
 import "./App.css";
+import Relogio from "./components/Relogio";
 
 function App() {
   const textoDestaque = {
@@ -10,6 +11,7 @@ function App() {
   return (
     <>
       <section className="container">
+        <Relogio />
         <h1 style={{ color: "#00f", fontSize: "5rem" }}>AndreyODev</h1>
         <h2 style={textoDestaque}>Curso de React</h2>
         <p className="texto">Estou gostando de estudar React</p>
