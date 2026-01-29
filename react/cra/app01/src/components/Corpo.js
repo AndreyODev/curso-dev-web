@@ -1,12 +1,12 @@
 import React from "react";
-import Dados from "./Dados.js";
+import Dados from "./Dados.jsx";
 
 function Corpo() {
 	function github() {
 		return "andreyODev função";
 	}
-	const n1 = 7;
-	const n2 = 13;
+	const n1 = 27;
+	const n2 = 23;
 	const somar = (v1, v2) => {
 		return v1 + v2;
 	};
