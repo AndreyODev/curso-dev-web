@@ -1,29 +1,52 @@
-// Aula 8
-import React from "react";
+// Aula 10
+import { useState } from "react";
 import "./App.css";
-import Relogio from "./components/Relogio";
+import Numero from "./components/Numero";
 
-function App() {
-  const textoDestaque = {
-    color: "#00f",
-    fontSize: "3rem",
-  };
+export default function App() {
+  const [numero, setNumero] = useState(10);
   return (
     <>
-      <section className="container">
-        <Relogio />
-        <h1 style={{ color: "#00f", fontSize: "5rem" }}>AndreyODev</h1>
-        <h2 style={textoDestaque}>Curso de React</h2>
-        <p className="texto">Estou gostando de estudar React</p>
-        <a href="https://www.google.com/" target="_blank">
-          Google
-        </a>
-      </section>
+      <p>Valor do state: {numero}</p>
+      <button
+        onClick={() => {
+          setNumero(numero + 1);
+        }}
+      >
+        Clique
+      </button>
+
+      <Numero numero={numero} setNumero={setNumero} />
     </>
   );
 }
 
-export default App;
+// Aula 8 a 9
+// import React from "react";
+// import "./App.css";
+// import Relogio from "./components/Relogio";
+
+// function App() {
+//   const textoDestaque = {
+//     color: "#00f",
+//     fontSize: "3rem",
+//   };
+//   return (
+//     <>
+//       <section className="container">
+//         <Relogio />
+//         <h1 style={{ color: "#00f", fontSize: "5rem" }}>AndreyODev</h1>
+//         <h2 style={textoDestaque}>Curso de React</h2>
+//         <p className="texto">Estou gostando de estudar React</p>
+//         <a href="https://www.google.com/" target="_blank">
+//           Google
+//         </a>
+//       </section>
+//     </>
+//   );
+// }
+
+// export default App;
 
 // Aula 1 até 7
 // import React from "react";
