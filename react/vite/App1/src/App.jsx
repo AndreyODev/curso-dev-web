@@ -1,25 +1,61 @@
-// Aula 10
+// Aula 11 - Eventos
 import { useState } from "react";
-import "./App.css";
-import Numero from "./components/Numero";
+import Led from "./components/Led";
 
 export default function App() {
-  const [numero, setNumero] = useState(10);
+  const [ligado, setLigado] = useState(false);
+
+  const cancelar = (obj) => {
+    return obj.preventDefault();
+  };
+
   return (
     <>
-      <p>Valor do state: {numero}</p>
-      <button
-        onClick={() => {
-          setNumero(numero + 1);
+      <Led ligado={ligado} setLigado={setLigado} />
+      <a
+        style={{
+          border: "1px solid blue",
+          margin: "0 20px",
+          padding: "5px 10px",
+          textDecoration: "none",
+          color: "#fff",
+          borderRadius: "5px",
+          background: "blue",
+        }}
+        href="https://github.com/AndreyODev"
+        target="_blank"
+        onClick={(e) => {
+          cancelar(e);
         }}
       >
-        Clique
-      </button>
-
-      <Numero numero={numero} setNumero={setNumero} />
+        AndreyODev
+      </a>
     </>
   );
 }
+
+// Aula 10 - Usando useState
+// import { useState } from "react";
+// import "./App.css";
+// import Numero from "./components/Numero";
+
+// export default function App() {
+//   const [numero, setNumero] = useState(10);
+//   return (
+//     <>
+//       <p>Valor do state: {numero}</p>
+//       <button
+//         onClick={() => {
+//           setNumero(numero + 1);
+//         }}
+//       >
+//         Clique
+//       </button>
+
+//       <Numero numero={numero} setNumero={setNumero} />
+//     </>
+//   );
+// }
 
 // Aula 8 a 9
 // import React from "react";
