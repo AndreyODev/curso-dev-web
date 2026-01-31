@@ -1,39 +1,80 @@
-// Aula 12 - Renderização condicional
-
-import { useState } from "react";
-
+// Aula 13 - Manipulando lista (array), usando o método map
 export default function App() {
-  const [cor, setCor] = useState(1);
-  const vermelho = { color: "#f00" };
-  const verde = { color: "#0f0" };
-  const azul = { color: "#00f" };
+  //   const carros = ["HRV", "Golf", "BMW", "Focus", "Cruze", "Argo"];
+  const carros = [
+    {
+      categoria: "Esporte",
+      preco: "11000.00",
+      modelo: "Golf GTI",
+    },
+    {
+      categoria: "Esporte",
+      preco: "120000.00",
+      modelo: "Camaro",
+    },
+    {
+      categoria: "SUV",
+      preco: "85000.00",
+      modelo: "HRV",
+    },
+    {
+      categoria: "Utilitario",
+      preco: "120000.00",
+      modelo: "Hillux",
+    },
+  ];
+  const listaCarros = carros.map((carro, indice, array) => {
+    return (
+      /* <p>{JSON.stringify(carro)}</p> */
+      <li key={indice}>
+        {indice} - Modelo: {carro.modelo} - Categoria: {carro.categoria} - Preço: {carro.preco}
+      </li>
+    );
+  });
 
-  const retCor = (c) => {
-    if (c == 1) {
-      return vermelho;
-    } else if (c == 2) {
-      return verde;
-    } else if (c == 3) {
-      return azul;
-    }
-  };
-  const mudarCor = () => {
-    setCor((c) => (c >= 3 ? 1 : c + 1));
-  };
-  setInterval(mudarCor, 3000);
   return (
     <>
-      <h1 style={retCor(cor)}>AndreyODev </h1>
-      <button
-        onClick={() => {
-          mudarCor();
-        }}
-      >
-        Mudar Cor
-      </button>
+      {/* <ul>{listaCarros[0]}</ul> */}
+      <ul>{listaCarros}</ul>
     </>
   );
 }
+
+// Aula 12 - Renderização condicional
+// import { useState } from "react";
+
+// export default function App() {
+//   const [cor, setCor] = useState(1);
+//   const vermelho = { color: "#f00" };
+//   const verde = { color: "#0f0" };
+//   const azul = { color: "#00f" };
+
+//   const retCor = (c) => {
+//     if (c == 1) {
+//       return vermelho;
+//     } else if (c == 2) {
+//       return verde;
+//     } else if (c == 3) {
+//       return azul;
+//     }
+//   };
+//   const mudarCor = () => {
+//     setCor((c) => (c >= 3 ? 1 : c + 1));
+//   };
+//   setInterval(mudarCor, 3000);
+//   return (
+//     <>
+//       <h1 style={retCor(cor)}>AndreyODev </h1>
+//       <button
+//         onClick={() => {
+//           mudarCor();
+//         }}
+//       >
+//         Mudar Cor
+//       </button>
+//     </>
+//   );
+// }
 
 // import { useState } from "react";
 
