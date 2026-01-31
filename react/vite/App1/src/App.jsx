@@ -1,38 +1,111 @@
-// Aula 11 - Eventos
+// Aula 12 - Renderização condicional
+
 import { useState } from "react";
-import Led from "./components/Led";
 
 export default function App() {
-  const [ligado, setLigado] = useState(false);
+  const [cor, setCor] = useState(1);
+  const vermelho = { color: "#f00" };
+  const verde = { color: "#0f0" };
+  const azul = { color: "#00f" };
 
-  const cancelar = (obj) => {
-    return obj.preventDefault();
+  const retCor = (c) => {
+    if (c == 1) {
+      return vermelho;
+    } else if (c == 2) {
+      return verde;
+    } else if (c == 3) {
+      return azul;
+    }
   };
-
+  const mudarCor = () => {
+    setCor((c) => (c >= 3 ? 1 : c + 1));
+  };
+  setInterval(mudarCor, 3000);
   return (
     <>
-      <Led ligado={ligado} setLigado={setLigado} />
-      <a
-        style={{
-          border: "1px solid blue",
-          margin: "0 20px",
-          padding: "5px 10px",
-          textDecoration: "none",
-          color: "#fff",
-          borderRadius: "5px",
-          background: "blue",
-        }}
-        href="https://github.com/AndreyODev"
-        target="_blank"
-        onClick={(e) => {
-          cancelar(e);
+      <h1 style={retCor(cor)}>AndreyODev </h1>
+      <button
+        onClick={() => {
+          mudarCor();
         }}
       >
-        AndreyODev
-      </a>
+        Mudar Cor
+      </button>
     </>
   );
 }
+
+// import { useState } from "react";
+
+// export default function App() {
+//   const [log, setLog] = useState(false);
+//   const msgLogin = () => {
+//     return "Usuario Logado";
+//   };
+//   const msgLogout = () => {
+//     return "Favor Logar";
+//   };
+
+//   const cumprimento = () => {
+//     const hora = new Date().getHours();
+//     if (hora >= 0 && hora < 13) {
+//       return <p>Bom dia</p>;
+//     } else if (hora >= 13 && hora < 18) {
+//       return <p>Boa tarde</p>;
+//     } else {
+//       return <p>Boa noite</p>;
+//     }
+//   };
+//   return (
+//     <>
+//       {cumprimento()}
+//       <p>{log ? msgLogin() : msgLogout()}</p>
+//       <button
+//         onClick={() => {
+//           setLog(!log);
+//         }}
+//       >
+//         {log ? "Logout" : "Login"}
+//       </button>
+//     </>
+//   );
+// }
+
+// Aula 11 - Eventos
+// import { useState } from "react";
+// import Led from "./components/Led";
+
+// export default function App() {
+//   const [ligado, setLigado] = useState(false);
+
+//   const cancelar = (obj) => {
+//     return obj.preventDefault();
+//   };
+
+//   return (
+//     <>
+//       <Led ligado={ligado} setLigado={setLigado} />
+//       <a
+//         style={{
+//           border: "1px solid blue",
+//           margin: "0 20px",
+//           padding: "5px 10px",
+//           textDecoration: "none",
+//           color: "#fff",
+//           borderRadius: "5px",
+//           background: "blue",
+//         }}
+//         href="https://github.com/AndreyODev"
+//         target="_blank"
+//         onClick={(e) => {
+//           cancelar(e);
+//         }}
+//       >
+//         AndreyODev
+//       </a>
+//     </>
+//   );
+// }
 
 // Aula 10 - Usando useState
 // import { useState } from "react";
