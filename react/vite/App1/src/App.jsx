@@ -1,44 +1,75 @@
-// Aula 13 - Manipulando lista (array), usando o método map
-export default function App() {
-  //   const carros = ["HRV", "Golf", "BMW", "Focus", "Cruze", "Argo"];
-  const carros = [
-    {
-      categoria: "Esporte",
-      preco: "11000.00",
-      modelo: "Golf GTI",
-    },
-    {
-      categoria: "Esporte",
-      preco: "120000.00",
-      modelo: "Camaro",
-    },
-    {
-      categoria: "SUV",
-      preco: "85000.00",
-      modelo: "HRV",
-    },
-    {
-      categoria: "Utilitario",
-      preco: "120000.00",
-      modelo: "Hillux",
-    },
-  ];
-  const listaCarros = carros.map((carro, indice, array) => {
-    return (
-      /* <p>{JSON.stringify(carro)}</p> */
-      <li key={indice}>
-        {indice} - Modelo: {carro.modelo} - Categoria: {carro.categoria} - Preço: {carro.preco}
-      </li>
-    );
-  });
+// Aula 14 - Manipulando elementos de formulário
+import { useState } from "react";
 
+export default function App() {
+  const [nome, setNome] = useState("");
+  const [carro, setCarro] = useState("");
+
+  const handleChange = (e) => {
+    setNome(e.target.value);
+  };
   return (
     <>
-      {/* <ul>{listaCarros[0]}</ul> */}
-      <ul>{listaCarros}</ul>
+      <label> Digite seu Nome: </label>
+      <input type="text" name="fnome" value={nome} onChange={(e) => handleChange(e)} />
+
+      <p>Nome digitado: {nome}</p>
+
+      <label>Selecione um carro</label>
+      <select value={carro} onChange={(e) => setCarro(e.target.value)}>
+        <option value="HRV">HRV</option>
+        <option value="GOLF">GOLF</option>
+        <option value="CRUZE">CRUZE</option>
+        <option value="Argo">Argo</option>
+      </select>
+      <input type="text" name="fcarro" value={carro} onChange={(e) => setCarro(e.target.value)} />
+
+      <p>Carro selecionado: {carro}</p>
     </>
   );
 }
+
+// Aula 13 - Manipulando lista (array), usando o método map
+//export default function App() {
+//   const carros = ["HRV", "Golf", "BMW", "Focus", "Cruze", "Argo"];
+//   const carros = [
+//     {
+//       categoria: "Esporte",
+//       preco: "11000.00",
+//       modelo: "Golf GTI",
+//     },
+//     {
+//       categoria: "Esporte",
+//       preco: "120000.00",
+//       modelo: "Camaro",
+//     },
+//     {
+//       categoria: "SUV",
+//       preco: "85000.00",
+//       modelo: "HRV",
+//     },
+//     {
+//       categoria: "Utilitario",
+//       preco: "120000.00",
+//       modelo: "Hillux",
+//     },
+//   ];
+//   const listaCarros = carros.map((carro, indice, array) => {
+//     return (
+//       /* <p>{JSON.stringify(carro)}</p> */
+//       <li key={indice}>
+//         {indice} - Modelo: {carro.modelo} - Categoria: {carro.categoria} - Preço: {carro.preco}
+//       </li>
+//     );
+//   });
+
+//   return (
+//     <>
+//       {/* <ul>{listaCarros[0]}</ul> */}
+//       <ul>{listaCarros}</ul>
+//     </>
+//   );
+// }
 
 // Aula 12 - Renderização condicional
 // import { useState } from "react";
