@@ -1,33 +1,68 @@
-// Aula 14 - Manipulando elementos de formulário
+// Aula 15 - Manipulando objetos com State usando apenas um state para vários componentes
+
 import { useState } from "react";
 
 export default function App() {
-  const [nome, setNome] = useState("");
-  const [carro, setCarro] = useState("");
-
-  const handleChange = (e) => {
-    setNome(e.target.value);
+  const [form, setForm] = useState({ nome: "", curso: "", ano: "" });
+  const handleFormChange = (e) => {
+    if (e.target.getAttribute("name") == "fnome") {
+      setForm({ nome: e.target.value, curso: form.curso, ano: form.ano });
+    } else if (e.target.getAttribute("name") == "fcurso") {
+      setForm({ nome: form.nome, curso: e.target.value, ano: form.ano });
+    } else if (e.target.getAttribute("name") == "fano") {
+      setForm({ nome: form.nome, curso: form.curso, ano: e.target.value });
+    }
   };
+
   return (
     <>
-      <label> Digite seu Nome: </label>
-      <input type="text" name="fnome" value={nome} onChange={(e) => handleChange(e)} />
+      <label>Nome </label>
+      <input type="text" name="fnome" value={form.nome} onChange={(e) => handleFormChange(e)} />
+      <br />
+      <label>Curso </label>
+      <input type="text" name="fcurso" value={form.curso} onChange={(e) => handleFormChange(e)} />
+      <br />
+      <label>Ano </label>
+      <input type="text" name="fano" value={form.ano} onChange={(e) => handleFormChange(e)} />
+      <br />
 
-      <p>Nome digitado: {nome}</p>
-
-      <label>Selecione um carro</label>
-      <select value={carro} onChange={(e) => setCarro(e.target.value)}>
-        <option value="HRV">HRV</option>
-        <option value="GOLF">GOLF</option>
-        <option value="CRUZE">CRUZE</option>
-        <option value="Argo">Argo</option>
-      </select>
-      <input type="text" name="fcarro" value={carro} onChange={(e) => setCarro(e.target.value)} />
-
-      <p>Carro selecionado: {carro}</p>
+      <p>Nome digitado: {form.nome}</p>
+      <p>Curso digitado: {form.curso}</p>
+      <p>Ano digitado: {form.ano}</p>
     </>
   );
 }
+
+// Aula 14 - Manipulando elementos de formulário
+// import { useState } from "react";
+
+// export default function App() {
+//   const [nome, setNome] = useState("");
+//   const [carro, setCarro] = useState("");
+
+//   const handleChange = (e) => {
+//     setNome(e.target.value);
+//   };
+//   return (
+//     <>
+//       <label> Digite seu Nome: </label>
+//       <input type="text" name="fnome" value={nome} onChange={(e) => handleChange(e)} />
+
+//       <p>Nome digitado: {nome}</p>
+
+//       <label>Selecione um carro</label>
+//       <select value={carro} onChange={(e) => setCarro(e.target.value)}>
+//         <option value="HRV">HRV</option>
+//         <option value="GOLF">GOLF</option>
+//         <option value="CRUZE">CRUZE</option>
+//         <option value="Argo">Argo</option>
+//       </select>
+//       <input type="text" name="fcarro" value={carro} onChange={(e) => setCarro(e.target.value)} />
+
+//       <p>Carro selecionado: {carro}</p>
+//     </>
+//   );
+// }
 
 // Aula 13 - Manipulando lista (array), usando o método map
 //export default function App() {
