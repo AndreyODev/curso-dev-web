@@ -1,41 +1,59 @@
-// Aula 16 - Elevação de State
-import { useState } from "react";
-import Nota from "./components/Nota";
-import Resultado from "./components/Resultado";
+// Aula 17 - CONTENÇÃO
+import Caixa from "./components/Caixa";
+import GitHub from "./components/GitHub";
 
 export default function App() {
-  const [notas, setNotas] = useState({ nota1: "0", nota2: "0", nota3: "0", nota4: "0" });
-
-  const handleSetNotas = (e) => {
-    if (e.target.getAttribute("name") == "nota1") {
-      setNotas({ ...notas, nota1: e.target.value });
-    } else if (e.target.getAttribute("name") == "nota2") {
-      setNotas({ ...notas, nota2: e.target.value });
-    } else if (e.target.getAttribute("name") == "nota3") {
-      setNotas({ ...notas, nota3: e.target.value });
-    } else if (e.target.getAttribute("name") == "nota4") {
-      setNotas({ ...notas, nota4: e.target.value });
-    }
-  };
-
-  // const [nota1, setNota1] = useState(0);
-  // const [nota2, setNota2] = useState(0);
-  // const [nota3, setNota3] = useState(0);
-  // const [nota4, setNota4] = useState(0);
   return (
     <>
-      <Nota num={1} name="nota1" nota={notas.nota1} setNota={handleSetNotas} />
-      <Nota num={2} name="nota2" nota={notas.nota2} setNota={handleSetNotas} />
-      <Nota num={3} name="nota3" nota={notas.nota3} setNota={handleSetNotas} />
-      <Nota num={4} name="nota4" nota={notas.nota4} setNota={handleSetNotas} />
-      <Resultado
-        somaNotas={
-          parseFloat(notas.nota1) + parseFloat(notas.nota2) + parseFloat(notas.nota3) + parseFloat(notas.nota4)
-        }
-      />
+      <Caixa site="https://github.com/AndreyODev">
+        <p>Curso de React</p>
+      </Caixa>
+
+      <GitHub>
+        <h2>AndreyODev</h2>
+      </GitHub>
     </>
   );
 }
+
+// // Aula 16 - Elevação de State
+// import { useState } from "react";
+// import Nota from "./components/Nota";
+// import Resultado from "./components/Resultado";
+
+// export default function App() {
+//   const [notas, setNotas] = useState({ nota1: "0", nota2: "0", nota3: "0", nota4: "0" });
+
+//   const handleSetNotas = (e) => {
+//     if (e.target.getAttribute("name") == "nota1") {
+//       setNotas({ ...notas, nota1: e.target.value });
+//     } else if (e.target.getAttribute("name") == "nota2") {
+//       setNotas({ ...notas, nota2: e.target.value });
+//     } else if (e.target.getAttribute("name") == "nota3") {
+//       setNotas({ ...notas, nota3: e.target.value });
+//     } else if (e.target.getAttribute("name") == "nota4") {
+//       setNotas({ ...notas, nota4: e.target.value });
+//     }
+//   };
+
+//   // const [nota1, setNota1] = useState(0);
+//   // const [nota2, setNota2] = useState(0);
+//   // const [nota3, setNota3] = useState(0);
+//   // const [nota4, setNota4] = useState(0);
+//   return (
+//     <>
+//       <Nota num={1} name="nota1" nota={notas.nota1} setNota={handleSetNotas} />
+//       <Nota num={2} name="nota2" nota={notas.nota2} setNota={handleSetNotas} />
+//       <Nota num={3} name="nota3" nota={notas.nota3} setNota={handleSetNotas} />
+//       <Nota num={4} name="nota4" nota={notas.nota4} setNota={handleSetNotas} />
+//       <Resultado
+//         somaNotas={
+//           parseFloat(notas.nota1) + parseFloat(notas.nota2) + parseFloat(notas.nota3) + parseFloat(notas.nota4)
+//         }
+//       />
+//     </>
+//   );
+// }
 
 // Aula 15 - Manipulando objetos usando apenas um state
 // import { useState } from "react";
