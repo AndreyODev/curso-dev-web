@@ -1,20 +1,44 @@
-// Aula 17 - CONTENÇÃO
-import Caixa from "./components/Caixa";
-import GitHub from "./components/GitHub";
+// Aula 19 - UseEffect
+import { useEffect, useState } from "react";
 
 export default function App() {
+  const [contagem, setContagem] = useState(0);
+
+  useEffect(() => {
+    console.log("Página carregada");
+    document.title = "Contagem: " + contagem;
+  });
   return (
     <>
-      <Caixa site="https://github.com/AndreyODev">
-        <p>Curso de React</p>
-      </Caixa>
-
-      <GitHub>
-        <h2>AndreyODev</h2>
-      </GitHub>
+      <p>Contagem: {contagem}</p>
+      <button
+        onClick={() => {
+          setContagem(contagem + 1);
+        }}
+      >
+        Contar
+      </button>
     </>
   );
 }
+
+// Aula 17 - CONTENÇÃO
+// import Caixa from "./components/Caixa";
+// import GitHub from "./components/GitHub";
+
+// export default function App() {
+//   return (
+//     <>
+//       <Caixa site="https://github.com/AndreyODev">
+//         <p>Curso de React</p>
+//       </Caixa>
+
+//       <GitHub>
+//         <h2>AndreyODev</h2>
+//       </GitHub>
+//     </>
+//   );
+// }
 
 // // Aula 16 - Elevação de State
 // import { useState } from "react";
