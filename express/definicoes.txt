@@ -1,0 +1,8 @@
+Rota:
+    É o caminho que define qual função será executada
+    quando o servidor receber uma requisição.
+		
+
+Parâmentro de rota:
+	É uma variável que é definida na rota para capturar 
+	os valores da URL para identificar alguma coisa específica. 

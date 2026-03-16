@@ -1,0 +1,6 @@
+Status	Significado
+1xx	Informativo
+2xx	Sucesso
+3xx	Redirecionamento
+4xx	Erro do cliente
+5xx	Erro do servidor
