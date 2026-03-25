@@ -26,25 +26,59 @@ const mockUsers = [
 ];
 
 app.get("/api/users", (req, res) => {
-	console.log(req.query);
-	// const { query: { filter, value },} = req;
-	const {
-		query: { filter, value },
-	} = req;
+	const { id, filter, value } = req.query;
 
-	// Quando o filtro e o valor forem underfined
-	if (!filter && !value) {
-		return res.send(mockUsers);
+	// Buscar pelo ID
+	// /api/users?id=4
+	if (id) {
+		const parsedId = parseInt(id);
+
+		if (isNaN(parsedId)) {
+			return res.status(400).send("ID inválido");
+		}
+
+		const findUser = mockUsers.find((user) => user.id === parsedId);
+
+		if (!findUser) {
+			return res.status(404).send("Usuário não encontrado");
+		}
+
+		return res.send(findUser);
 	}
 
+	// Filtro através do nome e sobrenome)
+	// filter=nome&value=gabryella ou filter=sobrenome&value=Dias
 	if (filter && value) {
 		return res.send(
 			mockUsers.filter((user) => {
-				return user[filter].includes(value);
+				return user[filter]?.includes(value);
 			}),
 		);
 	}
+
+	return res.send(mockUsers);
 });
+
+// app.get("/api/users", (req, res) => {
+// 	console.log(req.query);
+// 	// const { query: { filter, value },} = req;
+// 	const {
+// 		query: { filter, value },
+// 	} = req;
+
+// 	// Quando o filtro e o valor forem underfined
+// 	if (!filter && !value) {
+// 		return res.send(mockUsers);
+// 	}
+
+// 	if (filter && value) {
+// 		return res.send(
+// 			mockUsers.filter((user) => {
+// 				return user[filter].includes(value);
+// 			}),
+// 		);
+// 	}
+// });
 
 // Parâmetro de rota
 app.get("/api/users/:id", (req, res) => {
@@ -63,21 +97,31 @@ app.get("/api/users/:id", (req, res) => {
 });
 
 // Parâmetro de consulta pelo id usando o find
-app.get("/api/users", (req, res) => {
-	// console.log(parseInt(req.params.id));
-	const parsedId = parseInt(req.query.id);
-	console.log(parsedId);
+// app.get("/api/users", (req, res) => {
+// 	const { id } = req.query;
 
-	const findUser = mockUsers.find((user) => {
-		return user.id === parsedId;
-	});
+// 	// Verifica se o id foi enviado
+// 	if (!id) {
+// 		return res.status(400).send("ID não informado");
+// 	}
 
-	if (!findUser) {
-		return res.status(404).send("Usuário não encontrado");
-	}
+// 	const parsedId = parseInt(id);
 
-	res.send(findUser);
-});
+// 	// Verifica se é um número válido
+// 	if (isNaN(parsedId)) {
+// 		return res.status(400).send("ID inválido");
+// 	}
+
+// 	const findUser = mockUsers.find((user) => {
+// 		return user.id === parsedId;
+// 	});
+
+// 	if (!findUser) {
+// 		return res.status(404).send("Usuário não encontrado");
+// 	}
+
+// 	res.send(findUser);
+// });
 
 // Parâmetro de consulta pelo nome
 // app.get("/api/users", (req, res) => {
