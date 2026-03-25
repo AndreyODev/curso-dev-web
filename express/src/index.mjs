@@ -1,6 +1,9 @@
-import express from "express";
+import express, { response } from "express";
 
 const app = express();
+
+// Middleware
+app.use(express.json());
 
 const PORT = process.env.PORT || 3000;
 
@@ -57,6 +60,17 @@ app.get("/api/users", (req, res) => {
 	}
 
 	return res.send(mockUsers);
+});
+
+app.post("/api/users", (req, res) => {
+	console.log(req.body);
+	const { body } = req;
+
+	const novoUsuario = { id: mockUsers[mockUsers.length - 1].id + 1, ...body };
+
+	mockUsers.push(novoUsuario);
+
+	return res.status(201).send(novoUsuario);
 });
 
 // app.get("/api/users", (req, res) => {

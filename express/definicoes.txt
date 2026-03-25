@@ -18,4 +18,13 @@ Métodos HTTP:
 
 Postman: É uma ferramenta de desenvolvimento usada para testar apis estão
 enviando requisição para o servidor. Com o postamn, é possível realizar
-requisições sem o front-end
+requisições sem o front-end.
+
+Optional chaining: (?.) é uma forma de acessar algo sem dar erro caso não exista.
+
+Corpo da requisição: São os dados que é enviado para o servidor.
+
+Middleware: É uma forma de interceptar a requisição antes dela chegar na rota.
+    Exemplo: app.use(express.json()) é usado para interceptar a requisição quando 
+    o corpo da requisição for json, aí ao interceptar, ele transforma em objeto 
+    e coloca dentro de req.body.
