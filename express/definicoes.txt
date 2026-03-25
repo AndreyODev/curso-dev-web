@@ -6,3 +6,16 @@ Rota:
 Parâmentro de rota:
 	É uma variável que é definida na rota para capturar 
 	os valores da URL para identificar alguma coisa específica. 
+
+Parâmentro de consulta:
+	É um par de chave e valor que é usado depois do ponto de interrogação
+    para filtrar ou definir como os dados serão retornados.
+
+Métodos HTTP:
+    GET: É um método usado para pegar, obter ou buscar dados do servidor.
+    POST: É um método usado para enviar dados para o servidor para criar
+    ou adicionar alguma coisa.
+
+Postman: É uma ferramenta de desenvolvimento usada para testar apis estão
+enviando requisição para o servidor. Com o postamn, é possível realizar
+requisições sem o front-end

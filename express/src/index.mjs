@@ -48,7 +48,6 @@ app.get("/api/users", (req, res) => {
 
 // Parâmetro de rota
 app.get("/api/users/:id", (req, res) => {
-	// console.log(parseInt(req.params.id));
 	const parsedId = parseInt(req.params.id);
 	console.log(parsedId);
 
@@ -64,21 +63,21 @@ app.get("/api/users/:id", (req, res) => {
 });
 
 // Parâmetro de consulta pelo id usando o find
-// app.get("/api/users", (req, res) => {
-// 	// console.log(parseInt(req.params.id));
-// 	const parsedId = parseInt(req.query.id);
-// 	console.log(parsedId);
+app.get("/api/users", (req, res) => {
+	// console.log(parseInt(req.params.id));
+	const parsedId = parseInt(req.query.id);
+	console.log(parsedId);
 
-// 	const findUser = mockUsers.find((user) => {
-// 		return user.id === parsedId;
-// 	});
+	const findUser = mockUsers.find((user) => {
+		return user.id === parsedId;
+	});
 
-// 	if (!findUser) {
-// 		return res.status(404).send("Usuário não encontrado");
-// 	}
+	if (!findUser) {
+		return res.status(404).send("Usuário não encontrado");
+	}
 
-// 	res.send(findUser);
-// });
+	res.send(findUser);
+});
 
 // Parâmetro de consulta pelo nome
 // app.get("/api/users", (req, res) => {
